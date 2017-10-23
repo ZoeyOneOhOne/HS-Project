@@ -5,9 +5,14 @@ namespace HSVersion1.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
+
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -49,6 +54,11 @@ namespace HSVersion1.Models
     public class LoginViewModel
     {
         [Required]
+        [Display(Name = "UserName")]
+        [EmailAddress]
+        public string UserName { get; set; }
+
+        [Required]
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
@@ -65,9 +75,17 @@ namespace HSVersion1.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "UserRoles")]
+        public string UserRoles { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -83,6 +101,11 @@ namespace HSVersion1.Models
 
     public class ResetPasswordViewModel
     {
+        [Required]
+        [EmailAddress]
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
