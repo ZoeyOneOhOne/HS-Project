@@ -10,8 +10,6 @@ namespace HSVersion1.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string TimeStart { get; set; }
-        public string TimeEnd { get; set; }
+        public DateTime Date { get; set; }
     }
- 
 }
