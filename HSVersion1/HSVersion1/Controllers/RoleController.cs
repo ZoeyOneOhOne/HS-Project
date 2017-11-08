@@ -11,7 +11,7 @@ namespace HSVersion1.Controllers
 {
     public class RoleController : Controller
     {
-        private ApplicationDbContext context;
+        private ApplicationDbContext context= new ApplicationDbContext();
         // GET: Role
         public ActionResult Index()
         {

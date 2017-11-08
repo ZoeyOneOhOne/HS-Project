@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using HSVersion1.Models;
@@ -22,9 +25,17 @@ namespace HSVersion1.Controllers
             return View(shops);
         }
 
+       
         public ActionResult New()
         {
             return View();
+        }
+
+        public ActionResult Add(Shop shop)
+        {
+            _dbContext.Shops.Add(shop);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         public ActionResult Edit(int id)
