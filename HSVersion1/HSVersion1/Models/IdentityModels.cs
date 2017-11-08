@@ -21,6 +21,7 @@ namespace HSVersion1.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Shop> Shops { get; set; }
+        public DbSet<Reservation> Reservation { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
