@@ -190,13 +190,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BakeryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocalEventsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RedCabooseController.cs" />
     <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Controllers\RewardsProgramController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\ShopsController.cs" />
-    <Compile Include="Controllers\userscontroller.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,12 +227,15 @@
     <Compile Include="Migrations\201710241550531_Reservations.Designer.cs">
       <DependentUpon>201710241550531_Reservations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711210052110_RedoingShops.cs" />
+    <Compile Include="Migrations\201711210052110_RedoingShops.Designer.cs">
+      <DependentUpon>201711210052110_RedoingShops.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Reservation.cs" />
-    <Compile Include="Models\Shop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -407,19 +413,18 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shops\Index.cshtml" />
-    <Content Include="Views\Shops\New.cshtml" />
-    <Content Include="Views\Shops\_ShopForm.cshtml" />
-    <Content Include="Views\Shops\Edit.cshtml" />
-    <Content Include="Views\Shops\Delete.cshtml" />
     <Content Include="Views\Reservations\Create.cshtml" />
     <Content Include="Views\Reservations\Delete.cshtml" />
     <Content Include="Views\Reservations\Details.cshtml" />
     <Content Include="Views\Reservations\Edit.cshtml" />
     <Content Include="Views\Reservations\Index.cshtml" />
-    <Content Include="Views\userscontroller\Index.cshtml" />
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\RewardsProgram\Index.cshtml" />
+    <Content Include="Views\RedCaboose\Index.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Shops\Index.cshtml" />
+    <Content Include="Views\Bakery\Index.cshtml" />
+    <Content Include="Views\LocalEvents\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -455,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710241550531_Reservations.resx">
       <DependentUpon>201710241550531_Reservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711210052110_RedoingShops.resx">
+      <DependentUpon>201711210052110_RedoingShops.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

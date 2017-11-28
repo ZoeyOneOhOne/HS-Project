@@ -1,0 +1,15 @@
+﻿@using HSVersion1.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registerd Users</h2>
+<ul>
+    @foreach (var users in Model)
+    {
+        <li>@User.Identity</li>
+    }
+</ul>
+
+

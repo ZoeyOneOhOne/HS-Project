@@ -1,20 +1,17 @@
-﻿@model IEnumerable<HSVersion1.Models.Shop>
+﻿@using System.Web.Mvc.Html
+@using HSVersion1.Controllers
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Shops</h2>
-<p>
-    @Html.ActionLink("Add New", "New")
-</p>
+
 <ul>
-    @foreach (var shop in Model)
-    {
-        <li><h2>@shop.Name</h2></li>
-        <ul>
-           <li> @shop.Description (@shop.Hours)@Html.ActionLink("Edit", "Edit", new { id = shop.Id }) | @Html.ActionLink("Delete", "Delete", new { id = shop.Id })</li>
-        </ul>
-    }
+   
+    <li><h2><a href="/RedCaboose/Index">The Red Caboose</a></h2></li>
+    <li><h2><a href="/Bakery/Index">River and Rail Bakery</a></h2></li>
+
 </ul>
 

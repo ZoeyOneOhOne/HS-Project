@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace HSVersion1.Controllers
 {
-    public class ShopsController : Controller
+    public class RedCabooseController : Controller
     {
-        // GET: Shops
+        // GET: RedCaboose
         public ActionResult Index()
         {
             return View();
