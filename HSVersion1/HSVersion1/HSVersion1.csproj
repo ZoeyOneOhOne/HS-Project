@@ -425,6 +425,7 @@
     <Content Include="Views\Shops\Index.cshtml" />
     <Content Include="Views\Bakery\Index.cshtml" />
     <Content Include="Views\LocalEvents\Index.cshtml" />
+    <Content Include="Views\Promotions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
