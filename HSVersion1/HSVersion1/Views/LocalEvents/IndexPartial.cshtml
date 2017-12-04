@@ -1,0 +1,21 @@
+﻿
+@model IEnumerable<HSVersion1.Models.LocalEvents>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Local Events</h2>
+
+
+<p>
+    @Html.ActionLink("Add Event", "Create")
+</p>
+
+<ul>
+    @foreach (var events in Model)
+    {
+        <li>@events.Event (@events.Description) (@events.Location) (@events.Time) @Html.ActionLink("Edit", "Edit", new { id = events.Id })</li>
+    }
+</ul>

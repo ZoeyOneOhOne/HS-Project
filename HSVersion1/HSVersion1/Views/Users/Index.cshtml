@@ -1,15 +1,18 @@
-﻿@using HSVersion1.Models
+﻿@using System.Web.Mvc.Html
+@using HSVersion1.Controllers
+@model IEnumerable<HSVersion1.Models.ApplicationUser>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Registerd Users</h2>
+
 <ul>
     @foreach (var users in Model)
     {
-        <li>@User.Identity</li>
+        <li>@users.UserName</li>
     }
 </ul>
-
 

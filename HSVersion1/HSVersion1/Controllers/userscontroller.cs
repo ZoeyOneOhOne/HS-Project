@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using HSVersion1.Models;
@@ -15,9 +18,7 @@ namespace HSVersion1.Controllers
         // GET: Users
         public ActionResult Index()
         {
-            db.Users.ToList();
-            var users = db.Users.ToString();
-            return View(users);
+            return View(db.Users.ToList());
         }
     }
 }

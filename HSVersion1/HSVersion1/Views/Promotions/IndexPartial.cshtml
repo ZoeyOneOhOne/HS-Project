@@ -1,8 +1,16 @@
 ﻿
+@model IEnumerable<HSVersion1.Models.Promotion>
+
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "IndexPartial";
 }
 
 <h2>Promotions</h2>
+
+<ul>
+    @foreach (var promotions in Model)
+    {
+        <li>@promotions.Shop (@promotions.Deal)(@promotions.Time) @Html.ActionLink("Edit", "Edit", new { id = promotions.Id }) @Html.ActionLink("Delete", "Delete", new { id = promotions.Id })</li>
+    }
+</ul>
 

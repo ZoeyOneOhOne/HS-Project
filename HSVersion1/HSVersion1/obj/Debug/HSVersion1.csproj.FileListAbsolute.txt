@@ -213,3 +213,7 @@ C:\Users\Coles PC\source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVe
 C:\Users\Coles PC\source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.AddReservationTable2.resources
 C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.Reservations.resources
 C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.RedoingShops.resources
+C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.ok.resources
+C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.Promotions.resources
+C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.Promotions1.resources
+C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.AddLocalEventsTable.resources

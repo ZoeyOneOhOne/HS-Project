@@ -1,0 +1,12 @@
+﻿
+@model HSVersion1.Models.Promotion
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Promotion</h2>
+
+@using (Html.BeginForm("Update", "Promotions", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("Promotion_Form");
+}

@@ -1,0 +1,19 @@
+﻿@model HSVersion1.Models.Promotion
+
+ <div class="form-group">
+     @Html.LabelFor(m => m.Shop)
+     @Html.TextBoxFor(m => m.Shop, new {@class = "form-control"})
+ </div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Deal)
+    @Html.TextAreaFor(m => m.Deal, new { @class = "form-control", rows = 4 })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Time)
+    @Html.TextBoxFor(m => m.Time, new { @class = "form-control", type = "datetime-local" })
+</div>
+
+@Html.HiddenFor(m => m.Id)
+<input type="submit" class="btn btn-primary" value="Save" />

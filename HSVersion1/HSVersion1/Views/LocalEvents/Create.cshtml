@@ -1,0 +1,13 @@
+﻿@model HSVersion1.Models.LocalEvents
+
+@{
+    ViewBag.Event = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Local Event</h2>
+
+@using (Html.BeginForm("Create", "LocalEvents", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("Event_Form");
+}

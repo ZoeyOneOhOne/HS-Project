@@ -194,6 +194,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocalEventsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PromotionsController.cs" />
     <Compile Include="Controllers\RedCabooseController.cs" />
     <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Controllers\RewardsProgramController.cs" />
@@ -231,11 +232,30 @@
     <Compile Include="Migrations\201711210052110_RedoingShops.Designer.cs">
       <DependentUpon>201711210052110_RedoingShops.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711290528261_ok.cs" />
+    <Compile Include="Migrations\201711290528261_ok.Designer.cs">
+      <DependentUpon>201711290528261_ok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711290546211_Promotions.cs" />
+    <Compile Include="Migrations\201711290546211_Promotions.Designer.cs">
+      <DependentUpon>201711290546211_Promotions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711292255217_Promotions1.cs" />
+    <Compile Include="Migrations\201711292255217_Promotions1.Designer.cs">
+      <DependentUpon>201711292255217_Promotions1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712032225054_AddLocalEventsTable.cs" />
+    <Compile Include="Migrations\201712032225054_AddLocalEventsTable.Designer.cs">
+      <DependentUpon>201712032225054_AddLocalEventsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LocalEvents.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Promotion.cs" />
     <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -424,8 +444,16 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Shops\Index.cshtml" />
     <Content Include="Views\Bakery\Index.cshtml" />
-    <Content Include="Views\LocalEvents\Index.cshtml" />
-    <Content Include="Views\Promotions\Index.cshtml" />
+    <Content Include="Views\Promotions\New.cshtml" />
+    <Content Include="Views\Promotions\IndexPartial.cshtml" />
+    <Content Include="Views\Promotions\Promotion_Form.cshtml" />
+    <Content Include="Views\Promotions\Edit.cshtml" />
+    <Content Include="Views\Promotions\Delete.cshtml" />
+    <Content Include="Views\LocalEvents\Create.cshtml" />
+    <Content Include="Views\LocalEvents\IndexPartial.cshtml" />
+    <Content Include="Views\LocalEvents\Event_Form.cshtml" />
+    <Content Include="Views\LocalEvents\Edit.cshtml" />
+    <Content Include="Views\LocalEvents\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -464,6 +492,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711210052110_RedoingShops.resx">
       <DependentUpon>201711210052110_RedoingShops.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711290528261_ok.resx">
+      <DependentUpon>201711290528261_ok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711290546211_Promotions.resx">
+      <DependentUpon>201711290546211_Promotions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711292255217_Promotions1.resx">
+      <DependentUpon>201711292255217_Promotions1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712032225054_AddLocalEventsTable.resx">
+      <DependentUpon>201712032225054_AddLocalEventsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

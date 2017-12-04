@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace HSVersion1.Models
 {
+
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
@@ -20,7 +21,10 @@ namespace HSVersion1.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        //public DbSet<ApplicationUser> User { get; set; }
+        public DbSet<LocalEvents> Event { get; set; }
         public DbSet<Reservation> Reservation { get; set; }
+        public DbSet<Promotion> Promotion{ get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

@@ -1,0 +1,26 @@
+﻿
+@model HSVersion1.Models.Promotion
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<p>
+    Are you sure you would like to delete this video?
+</p>
+<ul>
+    <li> @Model.Shop</li>
+    <li> @Model.Deal</li>
+    <li>Ends: @Model.Time</li>
+</ul>
+
+@using (Html.BeginForm("DoDelete", "Promotions", FormMethod.Post))
+{
+
+    @Html.HiddenFor(m => m.Id)
+    <input type="submit" class="btn btn-danger" value="Yes, Delete it!" />
+    @Html.ActionLink("No, back to videos", "IndexPartial")
+}
