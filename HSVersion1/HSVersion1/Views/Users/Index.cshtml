@@ -9,10 +9,26 @@
 
 <h2>Registerd Users</h2>
 
-<ul>
-    @foreach (var users in Model)
-    {
-        <li>@users.UserName</li>
-    }
-</ul>
-
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Points)
+        </th>
+    </tr>
+    
+        @foreach (var users in Model) { 
+        <tr>
+        
+            <td>
+                @Html.DisplayFor(modelItem => users.UserName)
+            </td>
+        <td>
+            @Html.DisplayFor(modelItem => users.Points)
+        </td>
+        </tr>
+        }
+    
+</table>

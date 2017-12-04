@@ -25,21 +25,6 @@ namespace HSVersion1.Controllers
             return View(events);
         }
 
-        // GET: LocalEvents1/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            LocalEvents localEvents = db.Event.Find(id);
-            if (localEvents == null)
-            {
-                return HttpNotFound();
-            }
-            return View(localEvents);
-        }
-
         // GET: LocalEvents1/Create
         public ActionResult Create()
         {

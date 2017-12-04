@@ -20,5 +20,35 @@ namespace HSVersion1.Controllers
         {
             return View(db.Users.ToList());
         }
+
+        //Get points
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ApplicationUser users = db.Users.Find(id);
+            if (users == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(users);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "Id,Name,Points")] ApplicationUser users)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(users).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(users);
+        }
     }
 }

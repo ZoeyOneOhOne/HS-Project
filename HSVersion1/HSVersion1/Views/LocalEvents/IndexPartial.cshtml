@@ -7,15 +7,61 @@
 }
 
 <h2>Local Events</h2>
-
-
-<p>
-    @Html.ActionLink("Add Event", "Create")
-</p>
-
-<ul>
-    @foreach (var events in Model)
+@if (User.Identity.IsAuthenticated)
+{
+    if (User.IsInRole("Manager"))
     {
-        <li>@events.Event (@events.Description) (@events.Location) (@events.Time) @Html.ActionLink("Edit", "Edit", new { id = events.Id })</li>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
     }
-</ul>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Event)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+    </tr>
+
+    <ul>
+        @foreach (var events in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => events.Event)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => events.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => events.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => events.Time)
+                </td>
+            </tr>
+
+            if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("Manager"))
+                {
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new {id = events.Id}) |
+                        @Html.ActionLink("Delete", "Delete", new {id = events.Id})
+                    </td>
+                }
+            }
+        }
+    </ul>
+
+</table>

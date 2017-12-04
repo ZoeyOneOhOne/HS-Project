@@ -9,5 +9,6 @@
 
 @using (Html.BeginForm("Create", "LocalEvents", FormMethod.Post, new { @class = "form" }))
 {
+    @Html.AntiForgeryToken()
     Html.RenderPartial("Event_Form");
 }

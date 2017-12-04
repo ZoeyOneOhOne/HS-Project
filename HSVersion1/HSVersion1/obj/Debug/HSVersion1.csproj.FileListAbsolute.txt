@@ -217,3 +217,4 @@ C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVe
 C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.Promotions.resources
 C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.Promotions1.resources
 C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.AddLocalEventsTable.resources
+C:\Users\Coles PC\Source\GitRepo\HS-Project\HSVersion1\HSVersion1\obj\Debug\HSVersion1.Migrations.Points.resources

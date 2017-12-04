@@ -7,10 +7,55 @@
 
 <h2>Promotions</h2>
 
-<ul>
-    @foreach (var promotions in Model)
+@if (User.Identity.IsAuthenticated)
+{
+    if (User.IsInRole("Manager"))
     {
-        <li>@promotions.Shop (@promotions.Deal)(@promotions.Time) @Html.ActionLink("Edit", "Edit", new { id = promotions.Id }) @Html.ActionLink("Delete", "Delete", new { id = promotions.Id })</li>
+        <p>
+            @Html.ActionLink("Create New", "New")
+        </p>
     }
-</ul>
+}
 
+    <table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Shop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+    </tr>
+
+    <ul>
+        @foreach (var promotions in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => promotions.Shop)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => promotions.Deal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => promotions.Time)
+                </td>
+            </tr>
+
+            if (User.Identity.IsAuthenticated)
+             {
+                 if (User.IsInRole("Manager"))
+                 {
+                     <td>
+                         @Html.ActionLink("Edit", "Edit", new {id = promotions.Id}) |
+                         @Html.ActionLink("Delete", "Delete", new {id = promotions.Id})
+                     </td>
+                 }
+             }
+        }
+    </ul>
+
+</table>

@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<HSVersion1.Models.Promotion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Promotions</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Shop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+    </tr>
+
+    <ul>
+        @foreach (var promotions in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => promotions.Shop)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => promotions.Deal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => promotions.Time)
+                </td>
+            </tr>
+        }
+    </ul>
+
+</table>

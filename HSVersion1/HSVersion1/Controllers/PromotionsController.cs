@@ -38,7 +38,7 @@ namespace HSVersion1.Controllers
             return View(promotion);
         }
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
             var promotion = _dbContext.Promotion.SingleOrDefault(v => v.Id == id);
 
@@ -64,7 +64,7 @@ namespace HSVersion1.Controllers
             return RedirectToAction("IndexPartial");
         }
 
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
             var promotion = _dbContext.Promotion.SingleOrDefault(v => v.Id == id);
 
@@ -75,7 +75,7 @@ namespace HSVersion1.Controllers
         }
 
         [HttpPost]
-        public ActionResult DoDelete(int id)
+        public ActionResult DoDelete(int? id)
         {
             var video = _dbContext.Promotion.SingleOrDefault(v => v.Id == id);
             if (video == null)

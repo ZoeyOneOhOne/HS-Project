@@ -100,11 +100,14 @@
     </div>
     <div class="col-md-4">
         <h2>Local Events</h2>
-        <p><a class="btn btn-default" href="/LocalEvents/IndexPartial">More events &raquo;</a></p>
+        <p>
+            <a class="btn btn-default" href="/LocalEvents/IndexPartial">Local Events &raquo;</a>
+        </p>
     </div>
     <div class="col-md-4">
         @{
             Html.RenderPartial("~/Views/Promotions/IndexPartial.cshtml");
         }
+        <p><a class="btn btn-default" href="/Promotions/IndexPartial">More promotions &raquo;</a></p>
     </div>
 </div>

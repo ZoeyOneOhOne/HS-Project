@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 
 namespace HSVersion1.Models
 {
@@ -17,7 +18,11 @@ namespace HSVersion1.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public int Points { get; set; }
     }
+
+ 
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

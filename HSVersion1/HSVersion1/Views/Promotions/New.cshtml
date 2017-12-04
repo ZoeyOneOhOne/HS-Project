@@ -1,11 +1,12 @@
-﻿@model HSVersion1.Models.Promotion
+﻿
+@model HSVersion1.Models.Promotion
 @{
     ViewBag.Title = "New";
 }
 
 <h2>New Promotion</h2>
 
-@using (Html.BeginForm("Add", "Promotions", FormMethod.Post, new { @class = "form" }))
+@using (Html.BeginForm("New", "Promotions", FormMethod.Post, new { @class = "form" }))
 {
     Html.RenderPartial("Promotion_Form");
 }
