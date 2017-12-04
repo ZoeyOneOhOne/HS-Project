@@ -263,6 +263,31 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Danish.jpg" />
+    <Content Include="Assets\hat.jpg" />
+    <Content Include="Assets\hat2.jpg" />
+    <Content Include="Assets\IMG_9557.jpg" />
+    <Content Include="Assets\IMG_9561.jpg" />
+    <Content Include="Assets\IMG_9567.jpg" />
+    <Content Include="Assets\IMG_9569.jpg" />
+    <Content Include="Assets\IMG_9572.jpg" />
+    <Content Include="Assets\IMG_9573 %281%29.jpg" />
+    <Content Include="Assets\IMG_9573.jpg" />
+    <Content Include="Assets\IMG_9580.jpg" />
+    <Content Include="Assets\jewlry.jpg" />
+    <Content Include="Assets\left.jpg" />
+    <Content Include="Assets\Open.jpg" />
+    <Content Include="Assets\Open2.jpg" />
+    <Content Include="Assets\REd.jpg" />
+    <Content Include="Assets\RedCaboose.jpg" />
+    <Content Include="Assets\RedTrain.jpg" />
+    <Content Include="Assets\right.jpg" />
+    <Content Include="Assets\River&amp;Rail.jpg" />
+    <Content Include="Assets\shopSmall.jpg" />
+    <Content Include="Assets\signs.jpg" />
+    <Content Include="Assets\signs2.jpg" />
+    <Content Include="Assets\stickers.jpg" />
+    <Content Include="Assets\stickers2.jpg" />
     <Content Include="Assets\train.jpg" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
