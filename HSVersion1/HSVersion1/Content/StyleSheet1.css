@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: antiquewhite;
+    background-color: white;
 }
 
 .jumbotron {
@@ -17,4 +17,8 @@
     content: "";
     display: table;
     clear: both;
+}
+
+.carousel.item {
+    height: 330px;
 }

@@ -26,18 +26,18 @@ namespace HSVersion1.Controllers
         }
 
         // GET: LocalEvents1/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: LocalEvents1/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+  
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Event,Description,Location,Time")] LocalEvents localEvents)
         {
+            if (ModelState.ContainsKey("id"))
+                ModelState["id"].Errors.Clear();
             if (ModelState.IsValid)
             {
                 db.Event.Add(localEvents);
@@ -94,8 +94,18 @@ namespace HSVersion1.Controllers
             return View(localEvents);
         }
 
+        [HttpPost, ActionName("DoDelete")]
+        public ActionResult DoDelete(int? id)
+        {
+            var localEvents = db.Event.SingleOrDefault(v => v.Id == id);
+            if (localEvents == null) return HttpNotFound();
+            db.Event.Remove(localEvents);
+            db.SaveChanges();
+            return RedirectToAction("IndexPartial");
+        }
+
         // POST: LocalEvents1/Delete/5
-        [HttpPost, ActionName("Delete")]
+      /* [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -104,7 +114,7 @@ namespace HSVersion1.Controllers
             db.SaveChanges();
             return RedirectToAction("IndexPartial");
         }
-
+        */
         protected override void Dispose(bool disposing)
         {
             if (disposing)

@@ -23,11 +23,21 @@ namespace HSVersion1.Controllers
         }
 
         // ADD a new promotion
+        [HttpGet]
+        public ActionResult New()
+
+        {
+            return View();
+        }
+
+
+        // ADD a new promotion
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult New([Bind(Include = "Id,Shop,Deal,Time")] Promotion promotion)
 
         {
+            if (ModelState.ContainsKey("id"))
+                ModelState["id"].Errors.Clear();
             if (ModelState.IsValid)
             {
                 _dbContext.Promotion.Add(promotion);

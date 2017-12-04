@@ -1,5 +1,6 @@
 ﻿@using HSVersion1.Migrations
 @using HSVersion1.Models
+@model IEnumerable<HSVersion1.Models.Promotion>
 
 @{
     ViewBag.Title = "Index";
@@ -29,9 +30,10 @@
         </ul>
     </div>
 
-    <div>
+    <div class ="column">
         <table class="table">
             <tr>
+                <h2>Promotions</h2>
                 <th>
                     @Html.DisplayNameFor(model => model.Shop)
                 </th>
@@ -44,7 +46,7 @@
             </tr>
 
             <ul>
-                @foreach (var promotions in redPromos)
+                @foreach (var promotions in Model)
                 {
                     <tr>
                         <td>
